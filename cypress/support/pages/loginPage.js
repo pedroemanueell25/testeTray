@@ -1,7 +1,9 @@
+
 class LoginPage {
 
-//-----------------Login----------------------------//
 
+//-----------------Login----------------------------//
+    
     acessarAmbiente(ambiente) {
         cy.visit(Cypress.config().baseUrl + `${ambiente}`)        
     }

@@ -4,9 +4,12 @@ import LoginPage from "../support/pages/loginPage"
 
 describe('Teste E2E', () => {
     it('Cenario 1: Validar cadastro de usuario', () => {
+        const timestamp = Date.now()
+        const emailDinamico = `teste${timestamp}@teste.com.br`
+        
         LoginPage.acessarAmbiente('cadastro')        
         LoginPage.preencherNome('Teste 1')
-        LoginPage.preencherEmail('teste74578855@teste.com.br')
+        LoginPage.preencherEmail(emailDinamico)
         LoginPage.preencherSenha('123456')
         LoginPage.cliqueBotaoCadastrar() 
         LoginPage.validarCadastroComSucesso()       
